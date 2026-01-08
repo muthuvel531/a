@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pantaloons Style Fashion Store</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: #f6f6f6;
+            color: #333;
+        }
+
+        /* HEADER */
+        header {
+            background: #000;
+            color: #fff;
+            padding: 15px 40px;
+            display: flex;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        header h1 {
+            font-size: 24px;
+            letter-spacing: 1px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 14px;
+            list-style-type: none;
+        }
+nav a:hover {
+    color:red;
+}
+        
+
+        /* HERO */
+        .hero {
+            background: url('https://images.unsplash.com/photo-1521335629791-ce4aec67dd47') center/cover no-repeat;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 18px;
+        }
+
+        /* SECTION */
+        #section {
+            padding: 40px;
+        }
+
+        #section h2 {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        /* PRODUCTS GRID */
+        .products {
+            display: grid;
+            grid-template-columns: repeat(4, 4fr);
+            gap: 20px;
+            overflow-x: auto;
+        }
+        .products::-webkit-scrollbar{
+            display: none;
+        }
+.group{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+     
+}
+        .product {
+            background: #fff;
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding-bottom: 15px;
+            flex:0 0 19em;
+            animation: slideAnimation 6s ease-in-out infinite;
+        }
+
+        .product img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+            animation: imgFloatFade 4s ease-in-out infinite;
+        }
+
+        .product h3 {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        .product p {
+            color: #777;
+            margin-bottom: 10px;
+        }
+
+        .product button {
+            background: #000;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .product button:hover {
+            background: #444;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 900px) {
+            .products {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 500px) {
+            .products {
+                grid-template-columns: 1fr;
+            }
+
+            header {
+                flex-direction: column;
+            ;
+            }
+
+            nav {
+                margin-top: 10px;
+             
+                display: none;
+            }
+            h1{
+                margin-left: -80px;
+            }
+        }
+
+        /* ANIMATIONS */
+        @keyframes slideAnimation {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-5px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes imgFloatFade {
+            0% {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 0.9;
+                transform: scale(1.03);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+  </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>PANTALOONS</h1>
+        <nav>
+            <a href="#section">Men</a>
+            <a href="#">Women</a>
+            <a href="#">Kids</a>
+            <a href="#">Offers</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div>
+            <h2>New Season Styles</h2>
+            <p>Discover fashion for every occasion</p>
+        </div>
+    </section>
+
+    <section id="section">
+        <h2>Trending Products</h2>
+
+        <div class="products">
+            <div class="group">
+            <div class="product">
+                <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab" alt="Men Shirt">
+                <h3>Men Casual Shirt</h3>
+                <p>₹1,299</p>
+                <button>Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf" alt="Kids Wear">
+                <h3>Kids Wear Set</h3>
+                <p>₹999</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf" alt="Kids Wear">
+                <h3>Kids Wear Set</h3>
+                <p>₹999</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf" alt="Kids Wear">
+                <h3>Kids Wear Set</h3>
+                <p>₹999</p>
+                <button>Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf" alt="Kids Wear">
+                <h3>Kids Wear Set</h3>
+                <p>₹999</p>
+                <button>Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246" alt="Fashion">
+                <h3>Trendy Wear</h3>
+                <p>₹1,499</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246" alt="Fashion">
+                <h3>Trendy Wear</h3>
+                <p>₹1,499</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246" alt="Fashion">
+                <h3>Trendy Wear</h3>
+                <p>₹1,499</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246" alt="Fashion">
+                <h3>Trendy Wear</h3>
+                <p>₹1,499</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246" alt="Fashion">
+                <h3>Trendy Wear</h3>
+                <p>₹1,499</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246" alt="Fashion">
+                <h3>Trendy Wear</h3>
+                <p>₹1,499</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246" alt="Fashion">
+                <h3>Trendy Wear</h3>
+                <p>₹1,499</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246" alt="Fashion">
+                <h3>Trendy Wear</h3>
+                <p>₹1,499</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
