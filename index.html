@@ -1,16 +1,17 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pantaloons | Fashion Store</title>
 
     <style>
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
             font-family: "Segoe UI", Arial, sans-serif;
         }
 
@@ -32,66 +33,119 @@
             z-index: 1000;
         }
 
-        header h1 {
-            font-size: 24px;
-            letter-spacing: 2px;
-        }
-
         nav a {
             color: #fff;
             text-decoration: none;
             margin-left: 20px;
             font-size: 14px;
-            transition: 0.3s;
         }
 
         nav a:hover {
-            color: red;
+            color: red
         }
 
         /* HERO */
         .hero {
             height: 70vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+            background:
+                linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
                 url("https://images.unsplash.com/photo-1521335629791-ce4aec67dd47") center/cover no-repeat;
             display: flex;
-            align-items: center;
             justify-content: center;
+            align-items: center;
             text-align: center;
             color: #fff;
         }
 
         .hero h2 {
-            font-size: 48px;
-            margin-bottom: 10px;
+            font-size: 48px
         }
 
-        .hero p {
-            font-size: 18px;
+        /* CATEGORY SLIDER */
+        .category-slider {
+            display: flex;
+            gap: 15px;
+            overflow-x: auto;
+            padding: 20px;
+            background: #fff;
+        }
+
+        .category-slider::-webkit-scrollbar {
+            display: none;
+        }
+
+        .category {
+            min-width: 140px;
+            background: #f9f9f9;
+            border-radius: 15px;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .category img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        .category h3 {
+            font-size: 14px;
+            margin-top: 8px;
         }
 
         /* SECTION */
         section {
             padding: 60px 40px;
-            background-color: rgba(255, 0, 0, 0.854);
-            
+            background: rgba(255, 0, 0, 0.85);
         }
 
         section p {
             text-align: center;
-            margin-bottom: 30px;
             font-size: 32px;
-            color:#fff;
-            font-style: bold;
+            color: #fff;
+            font-weight: bold;
+            margin-bottom: 30px;
         }
 
-        /* PRODUCTS SLIDER */
+       
+        /* PROMO */
+        .promo {
+            position: relative;
+            max-width: 320px;
+            margin: 30px auto;
+        }
+
+        .promo img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .promo-text {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            right: 15px;
+            background: #ffffffdd;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .promo-text h2 {
+            color: red
+        }
+
+
+        /* PRODUCTS */
         .products {
             display: flex;
-            margin-left:-10px;
+            margin-left: -10px;
             gap: 25px;
             overflow-x: auto;
-            width:100%;
+            width: 100%;
             padding-bottom: 10px;
             scroll-snap-type: x mandatory;
         }
@@ -150,6 +204,25 @@
             background: red;
         }
 
+        .produc img {
+            width: 30%;
+            height: 300px;
+            justify-content: center;
+
+            margin-left: 30%;
+            object-fit: cover;
+        }
+
+        .class {
+            padding: 10px;
+            border: none;
+            width: 380px;
+
+            margin-left: 30%;
+            height: 100px;
+            background-color: #ffffffef;
+        }
+
         /* FOOTER */
         footer {
             background: #000;
@@ -159,27 +232,18 @@
             margin-top: 60px;
         }
 
-        /* RESPONSIVE */
-        @media (max-width: 768px) {
+        /* MOBILE */
+        @media(max-width:768px) {
             header {
-                flex-direction: column;
-            }
- section p{
-    font-size: 30px;
- }
-  .products {
-    width:360px;
-  }
- .product {
-    width:800px;
-    height:430px;
- }
-            nav {
-                margin-top: 10px;
+                flex-direction: column
             }
 
             .hero h2 {
-                font-size: 36px;
+                font-size: 34px
+            }
+
+            section p {
+                font-size: 26px
             }
         }
     </style>
@@ -190,7 +254,7 @@
     <header>
         <h1>PANTALOONS</h1>
         <nav>
-            <a href="#muthu">Men</a>
+            <a href="#">Men</a>
             <a href="#">Women</a>
             <a href="#">Kids</a>
             <a href="#">Offers</a>
@@ -201,8 +265,84 @@
         <div>
             <h2>New Season Styles</h2>
             <p>Discover fashion for every occasion</p>
+
         </div>
     </div>
+
+    <div class="category-slider">
+        <div class="category"><img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab">
+            <h3>Men</h3>
+        </div>
+        <div class="category"><img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf">
+            <h3>Kids</h3>
+        </div>
+        <div class="category"><img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246">
+            <h3>Trendy</h3>
+        </div>
+        <div class="category"><img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f">
+            <h3>Women</h3>
+        </div>
+        <div class="category"><img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab">
+            <h3>Men</h3>
+        </div>
+        <div class="category"><img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf">
+            <h3>Kids</h3>
+        </div>
+        <div class="category"><img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246">
+            <h3>Trendy</h3>
+        </div>
+        <div class="category"><img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f">
+            <h3>Women</h3>
+        </div>
+        <div class="category"><img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab">
+            <h3>Men</h3>
+        </div>
+        <div class="category"><img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf">
+            <h3>Kids</h3>
+        </div>
+        <div class="category"><img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246">
+            <h3>Trendy</h3>
+        </div>
+        <div class="category"><img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f">
+            <h3>Women</h3>
+        </div>
+        <div class="category"><img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab">
+            <h3>Men</h3>
+        </div>
+        <div class="category"><img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf">
+            <h3>Kids</h3>
+        </div>
+        <div class="category"><img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246">
+            <h3>Trendy</h3>
+        </div>
+        <div class="category"><img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f">
+            <h3>Women</h3>
+        </div>
+    </div>
+
+    </div>
+
+
+<!-- PROMOS -->
+<div class="promo">
+    <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab">
+    <div class="promo-text">
+        <h4>Denim Must-Have</h4>
+        <p>Straight & Baggy Fits Up to 50% Off</p>
+        <h2>SHOP NOW</h2>
+    </div>
+</div>
+
+<div class="promo">
+    <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246">
+    <div class="promo-text">
+        <h4>Trendy Picks</h4>
+        <p>Exclusive Styles Just Arrived</p>
+        <h2>SHOP NOW</h2>
+    </div>
+</div>
+    
+
 
     <section id="muthu">
         <p>Trending Products</p>
@@ -252,22 +392,22 @@
                     <button>Add to Cart</button>
                 </div>
             </div>
-<div class="product">
-    <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246">
-    <div class="product-content">
-        <h3>Trendy Wear</h3>
-        <p>₹1,499</p>
-        <button>Add to Cart</button>
-    </div>
-</div>
-<div class="product">
-    <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab">
-    <div class="product-content">
-        <h3>Men Casual Shirt</h3>
-        <p>₹1,299</p>
-        <button>Add to Cart</button>
-    </div>
-</div>
+            <div class="product">
+                <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246">
+                <div class="product-content">
+                    <h3>Trendy Wear</h3>
+                    <p>₹1,499</p>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+            <div class="product">
+                <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab">
+                <div class="product-content">
+                    <h3>Men Casual Shirt</h3>
+                    <p>₹1,299</p>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -278,3 +418,4 @@
 </body>
 
 </html>
+
