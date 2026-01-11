@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -109,7 +108,7 @@
             margin-bottom: 30px;
         }
 
-       
+
         /* PROMO */
         .promo {
             position: relative;
@@ -222,6 +221,97 @@
             height: 100px;
             background-color: #ffffffef;
         }
+/* ARRIVALS */
+#vel{
+    padding:30px 15px;
+    background:#fff;
+}
+#vel h2{
+    text-align:center;
+    margin-bottom:20px;
+}
+.arrival-slider{
+    display:flex;
+    gap:16px;
+    overflow-x:auto;
+}
+.arrival-slider::-webkit-scrollbar{ display:none; }
+.arrival-card{
+    min-width:150px;
+    padding:10px;
+    border:1px solid #000;
+    border-radius:30px;
+    text-align:center;
+    background:#fafafa;
+}
+
+.photo {
+display: flex;
+gap: 20px;
+overflow-x: auto;
+padding: 30px;
+}
+
+.photo::-webkit-scrollbar {
+display: none;
+}
+
+.p {
+min-width: 150px;
+text-align: center;
+}
+
+.po {
+margin-top: 40px;
+margin-left: -50px;
+}
+
+h5 {
+font-size: 60px;
+color: #777;
+}
+
+h6 {
+font-size: 18px;
+}
+
+h4 {
+color: red;
+margin-top: 15px;
+font-size: 25px;
+cursor: pointer;
+}
+
+.ph {
+min-width: 220px;
+background: #fff;
+border-radius: 10px;
+overflow: hidden;
+}
+
+.ph img {
+width: 100%;
+height: 250px;
+object-fit: cover;
+}
+
+.pho {
+padding: 12px;
+text-align: center;
+}
+
+.pho button {
+background: #000;
+color: #fff;
+border: none;
+padding: 8px 16px;
+border-radius: 18px;
+}
+
+.pho button:hover {
+background: red;
+}
+
 
         /* FOOTER */
         footer {
@@ -323,25 +413,25 @@
     </div>
 
 
-<!-- PROMOS -->
-<div class="promo">
-    <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab">
-    <div class="promo-text">
-        <h4>Denim Must-Have</h4>
-        <p>Straight & Baggy Fits Up to 50% Off</p>
-        <h2>SHOP NOW</h2>
+    <!-- PROMOS -->
+    <div class="promo">
+        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab">
+        <div class="promo-text">
+            <h4>Denim Must-Have</h4>
+            <p>Straight & Baggy Fits Up to 50% Off</p>
+            <h2>SHOP NOW</h2>
+        </div>
     </div>
-</div>
 
-<div class="promo">
-    <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246">
-    <div class="promo-text">
-        <h4>Trendy Picks</h4>
-        <p>Exclusive Styles Just Arrived</p>
-        <h2>SHOP NOW</h2>
+    <div class="promo">
+        <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246">
+        <div class="promo-text">
+            <h4>Trendy Picks</h4>
+            <p>Exclusive Styles Just Arrived</p>
+            <h2>SHOP NOW</h2>
+        </div>
     </div>
-</div>
-    
+
 
 
     <section id="muthu">
@@ -410,7 +500,84 @@
             </div>
         </div>
     </section>
+<div id="vel">
+    <h2>New Arrivals</h2>
+    <div class="arrival-slider">
+        <div class="arrival-card">Men</div>
+        <div class="arrival-card">Women</div>
+        <div class="arrival-card">Kids</div>
+        <div class="arrival-card">Trendy</div>
+    </div>
+</div>
 
+<div class="photo">
+    <div class="p">
+        <div class="po">
+            <h5>764</h5>
+            <h6>New Styles<br>Just Landed</h6>
+            <h4>Shop Now</h4>
+        </div>
+    </div>
+
+    <div class="ph">
+        <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246">
+        <div class="pho">
+            <h3>Trendy Wear</h3>
+            <p>₹1499</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+
+    <div class="ph">
+        <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246">
+        <div class="pho">
+            <h3>Trendy Wear</h3>
+            <p>₹1499</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+    <div class="ph">
+        <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246">
+        <div class="pho">
+            <h3>Trendy Wear</h3>
+            <p>₹1499</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+    <div class="ph">
+        <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246">
+        <div class="pho">
+            <h3>Trendy Wear</h3>
+            <p>₹1499</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+    <div class="ph">
+        <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246">
+        <div class="pho">
+            <h3>Trendy Wear</h3>
+            <p>₹1499</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+    <div class="ph">
+        <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246">
+        <div class="pho">
+            <h3>Trendy Wear</h3>
+            <p>₹1499</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+    <div class="ph">
+        <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246">
+        <div class="pho">
+            <h3>Trendy Wear</h3>
+            <p>₹1499</p>
+            <button>Add to Cart</button>
+        </div>
+    </div>
+</div>
+</div>
     <footer>
         © 2026 Pantaloons Fashion Store. All Rights Reserved.
     </footer>
@@ -418,4 +585,5 @@
 </body>
 
 </html>
+
 
